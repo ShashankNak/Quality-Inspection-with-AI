@@ -124,7 +124,7 @@
         Live Streaming
       </a>
       <a class="dropdown-item ps-3 border-radius-md mb-1" href="./viddown.html">
-        Video
+        Video Inspetion
       </a>
     </div>
   </li>
@@ -210,7 +210,26 @@
           <p class="lead text-white mt-3">Do the live streaming of the video feed you entered.</p>
           <!--THIS IS THE INPUT AREA FOR VIDEO CHECK BELOW FOR ITS OUTPUT-->
           <input type="file" accept="video/*" onchange="playVideo(event)" id="videoInput">
-
+          <br>
+          <select id="dropdown" onchange="saveSelectedValue()">
+            <option value="option1">Cashew</option>
+            <option value="option2">Capsule</option>
+            <option value="option3">Candle</option>
+            <option value="option4">Fryums</option>
+        </select>
+        
+        <script>
+        // Function to save the selected value
+        function saveSelectedValue() {
+            // Get the select element
+            const dropdown = document.getElementById('dropdown');
+            
+            // Get the selected value
+            const selectedValue = dropdown.value;
+            
+            // Display the selected value in the console (You can save it to a variable or use it as required)
+        }
+        </script>
         </div>
       </div>
     </div>
