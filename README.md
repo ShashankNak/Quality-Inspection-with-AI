@@ -27,6 +27,6 @@ pip install -r requirement.txt
 
 # You are good to go Now!
 
-# Run the main.py in the web folder
+## Run the main.py in the web folder
 
 # Enjoy ☻
