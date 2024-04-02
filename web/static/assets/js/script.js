@@ -2,7 +2,7 @@ async function uploadVideo() {
 
     var fileInput = document.getElementById('videoInput');
     var videoContainer = document.getElementById('videoPlayer');
-    if (videoContainer.src != ''){
+    if (videoContainer.src != '') {
         return;
     }
 
@@ -89,22 +89,27 @@ function restartFileInput() {
     document.getElementById('videoInput').value = '';
 }
 
+class videoFile{
+    constructor(fileName){
+        this.fileName = fileName;
+    }
 
-function samplevideoPlay(str){
+}
+
+async function samplevideoPlay(str) {
     const videoPlayer = document.getElementById("sampleVideoPlayer");
     const selectedProduct = document.getElementById("selectedProduct");
-    if (videoPlayer.innerHTML == ""){
-        videoPlayer.innerHTML = '<source src="../../../static/input/' + str+ '_test.mp4" type="video/mp4">';
+    if (videoPlayer.innerHTML == "") {
+        videoPlayer.innerHTML = '<source src="../../../static/input/' + str + '_test.mp4" type="video/mp4">';
         selectedProduct.innerHTML = str
-    }else{
+    } else {
         location.reload();
     }
 }
 
 
-function outputvideoPlay(){
+function outputvideoPlay() {
     const videoPlayer = document.getElementById("sampleVideoPlayerOutput");
     const product = document.getElementById("selectedProduct");
-
-    videoPlayer.innerHTML = '<source src="../../../static/output/' + product.innerHTML+ '_test.mp4" type="video/mp4">';
+    videoPlayer.innerHTML = '<source src="../../../static/output/' + product.innerHTML + '_test.mp4" type="video/mp4">';
 }

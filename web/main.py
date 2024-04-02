@@ -32,7 +32,7 @@ def predictvideo():
     video = request.files['video']
     if video.filename == '':
         return "No selected file"
-    if video and allowed_file(video.filename):
+    if allowed_file(video.filename):
         url = "web/static/input/"
         print("storing...")
         print(os.listdir(url))
